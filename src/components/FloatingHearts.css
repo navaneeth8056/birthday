@@ -1,0 +1,114 @@
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -50px;
+  opacity: 0.8;
+  animation: floatUp linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
+}
+
+.floating-popper {
+  position: absolute;
+  bottom: -50px;
+  opacity: 0.7;
+  animation: floatUpPopper linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes floatUpPopper {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-360deg) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Individual heart animations with different delays */
+.floating-heart:nth-child(1) { animation-delay: 0s; }
+.floating-heart:nth-child(2) { animation-delay: 1.5s; }
+.floating-heart:nth-child(3) { animation-delay: 3s; }
+.floating-heart:nth-child(4) { animation-delay: 4.5s; }
+.floating-heart:nth-child(5) { animation-delay: 6s; }
+.floating-heart:nth-child(6) { animation-delay: 7.5s; }
+.floating-heart:nth-child(7) { animation-delay: 9s; }
+.floating-heart:nth-child(8) { animation-delay: 10.5s; }
+.floating-heart:nth-child(9) { animation-delay: 12s; }
+.floating-heart:nth-child(10) { animation-delay: 13.5s; }
+.floating-heart:nth-child(11) { animation-delay: 15s; }
+.floating-heart:nth-child(12) { animation-delay: 16.5s; }
+.floating-heart:nth-child(13) { animation-delay: 18s; }
+.floating-heart:nth-child(14) { animation-delay: 19.5s; }
+.floating-heart:nth-child(15) { animation-delay: 21s; }
+.floating-heart:nth-child(16) { animation-delay: 22.5s; }
+.floating-heart:nth-child(17) { animation-delay: 24s; }
+.floating-heart:nth-child(18) { animation-delay: 25.5s; }
+.floating-heart:nth-child(19) { animation-delay: 27s; }
+.floating-heart:nth-child(20) { animation-delay: 28.5s; }
+.floating-heart:nth-child(21) { animation-delay: 30s; }
+.floating-heart:nth-child(22) { animation-delay: 31.5s; }
+.floating-heart:nth-child(23) { animation-delay: 33s; }
+.floating-heart:nth-child(24) { animation-delay: 34.5s; }
+.floating-heart:nth-child(25) { animation-delay: 36s; }
+
+/* Hover effect for hearts */
+.floating-heart:hover {
+  animation-play-state: paused;
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.8));
+}
+
+/* Hover effect for poppers */
+.floating-popper:hover {
+  animation-play-state: paused;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-heart, .floating-popper {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-heart, .floating-popper {
+    font-size: 14px !important;
+  }
+}
