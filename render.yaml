@@ -3,7 +3,7 @@ services:
     name: gowri-birthday-countdown
     env: static
     buildCommand: npm run build
-    staticPublishPath: ./dist
+    staticPublishPath: dist
     envVars:
       - key: NODE_VERSION
         value: 18.17.0
